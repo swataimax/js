@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+.main-heading {
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+.selection {
+	margin-right: auto;
+	margin-left: 25%;
+	margin-bottom: 20px;
+}
+.selection-heading {
+	font-size: 18px;
+	font-weight: bolder;
+	margin-left: 30px;
+	margin-right: auto;
+}
+
+.customer-type {
+	width: 150px;
+	height: 35px;
+	border: 1px solid darkgray;
+	border-radius: 10px;
+	margin-right: 10px;
+	text-align: center;
+	padding-top: 3%;
+	background-color: #ffffe0;
+	
+}
+
+.customer-type-radio {
+	transform: scale(1.5);
+}
+
+.main-block {
+	width: 760px;
+	margin-right: auto;
+	margin-left: 22.5%;
+}
+
+.label-type {
+	margin-left: 38%;
+	font-size: 1.2em;
+	font-weight: bolder;
+}
+
+.sub-heading {
+	font-weight: bolder;
+}
+.corporate {
+	display: none;
+}
+
+.individual {
+	display: none; 
+}
+
+/*activeクラスの追加でコンテンツを表示*/
+.active {
+	display: block;
+}
+
+.flex {
+	display: flex;
+}
+
+.input-item-heading {
+	width: 250px;
+	height: 35px;
+	border: 1px solid darkgray;
+	background-color: #f7f7f7;
+	padding-left: 5px;
+	padding-right: auto;
+	display: flex;
+	align-items: center;
+
+}
+.input-item {
+	width: 350px;
+	height: 35px;
+	border: 1px solid darkgray;
+	padding-left: 5px;
+	padding-right: 5px;
+	display: flex;
+	align-items: center;
+}
+
+.industry {
+	display: block;
+	height: 100px;
+	align-content: center;
+}
+
+.industry-font {
+	font-size: 0.8em;
+	font-weight: bolder;
+}
+
+.industry-block {
+	padding-top: 5px;
+}
+
+.text-size-s {
+	width: 30%;
+}
+.text-size-m {
+	width: 60%;
+}
+.text-size-l {
+	width: 100%;
+}
+.birth-select {
+	margin-left: 3px;
+}
+
+.headcount {
+	height: 50px;
+}
+.submit {
+	margin-top: 30px;
+}
+.back-link {
+	margin-top: 30px;
+}

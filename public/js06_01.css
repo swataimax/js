@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+#area {
+	width: 35%;
+/*  width: 70%;*/
+/*	width: 200px;*/
+/*	height: 100px;*/
+    border-style: solid;
+/*	border-style: dashed;*/
+    border-width: 1px;
+/*	border-width: 5px;*/
+}
+#section {
+    display: flex;
+}
+#back-button {
+    display: flex;
+    align-items: center; /*上下中央揃え*/
+}
+#forward-button {
+    display: flex;
+    align-items: center; /*上下中央揃え*/
+}
+
+.image-button {
+    width: 20px;
+/*	width: 30px;*/
+    margin-right: 10px;
+/*	margin-right: 20px;*/
+    margin-left: 10px;
+/*	margin-left: 20px;*/
+}
+
+#images {
+/*	width:200px;*/
+/*	height:100px;*/
+	
+    display: flex;
+    overflow: hidden;
+	 /* １つ目の要素以外は非表示にする */
+/*    flex-grow: 1;*/
+/*	flex-grow: 3;*/
+}
+.display-image {
+    min-width: 100%;
+/*    min-width: 50%;*/
+	 /* div領域にぴったり収める */
+}

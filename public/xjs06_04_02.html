@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>入力フォーム</title>
+	<link rel="stylesheet" href="js06_04.css">
+</head>
+
+<body onload="">
+	<div class="main-heading">ユーザー登録</div>
+	<div class="main-block">
+		<div class="selecttion">　</div>
+		<div class="label-type">
+			<div id="type">法人・個人</div>
+		</div>
+		<div>&nbsp;</div>
+
+		<!--  共通  -->
+		<div class="sub-heading">お客様情報</div>
+		<div class="flex">
+			<div class="input-item-heading">ご担当者名</div>
+			<div id="name" class="input-item">名前</div>
+		</div>
+		<div class="flex">
+			<div class="input-item-heading">ご担当者名（フリガナ）</div>
+			<div id="furigana" class="input-item">フリガナ</div>
+		</div>
+		<div class="flex">
+			<div class="input-item-heading">メールアドレス</div>
+			<div id="email" class="input-item">メールアドレス</div>
+		</div>
+		<div>&nbsp;</div>
+
+		<!--  法人  -->
+		<div class="">
+			<div class="sub-heading">会社情報</div>
+			<div class="flex">
+				<div class="input-item-heading">会社名</div>
+				<div id="company-name" class="input-item">会社名</div>
+			</div>
+			<div class="flex">
+				<div class="input-item-heading">部署名</div>
+				<div id="department-name" class="input-item">部署名</div>
+			</div>
+		</div>
+
+		<!--  個人  -->
+		<div class="">
+			<div class="sub-heading">住所</div>
+		</div>
+
+		<!--  共通  -->
+		<div class="flex">
+			<div class="input-item-heading">郵便番号（郵便番号入力不要）</div>
+			<div id="zip-code" class="input-item">郵便番号</div>
+		</div>
+		<div class="flex">
+			<div class="input-item-heading">住所</div>
+			<div id="address" class="input-item">住所</div>
+		</div>
+		<div class="flex">
+			<div class="input-item-heading">建物名</div>
+			<div id="building-name" class="input-item">建物名</div>
+		</div>
+		
+		<!--  法人  -->
+		<div class="">
+			<div class="flex">
+				<div class="input-item-heading">業種</div>
+				<div class="classification input-item">
+					<div>
+						<span>大分類：</span><span id="major-category">大分類</span>
+						<span>小分類：</span><span id="subcategory">小分類</span>
+					</div>
+				</div>
+			</div>
+			<div class="flex">
+				<div class="input-item-heading">従業員数</div>
+				<div id="headcount" class="input-item">従業員数</div>
+			</div>
+		</div>
+
+		<!--  個人  -->
+		<div class="">
+			<div class="flex">
+				<div class="input-item-heading">生年月日</div>
+				<div class="input-item">
+					<span id="year">年</span><span class="birthday">年</span>
+					<span id="month">月</span><span class="birthday">月</span>
+					<span id="day">日</span><span class="birthday">日</span>
+				</div>
+			</div>
+		</div>
+
+		<!--  共通  -->
+		<div class="flex">
+			<div class="input-item-heading">電話番号（ハイフン入力不要）</div>
+			<div id="tel" class="input-item">電話番号</div>
+		</div>
+
+		<div class="back-link">
+			<div class=""><a href="">戻る</a></div>
+		</div>
+	</div>
+	<script type="text/javascript" src=""></script>
+</body>
+
+</html>

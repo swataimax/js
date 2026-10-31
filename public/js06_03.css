@@ -1,0 +1,62 @@
+body {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	font-family: sans-serif;
+}
+
+.container {
+	margin-top: 10%;
+	margin-bottom: auto;
+	width: 500px;
+	height: 250px;
+}
+
+.tabMenu {
+	display: flex;
+	align-items: center;
+	height: 70px;
+	background-color: #d6ffff;
+	cursor: pointer;
+}
+
+/*タブを横に並べる*/
+.tab {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	font-size: 25px;
+	font-weight: bold;
+	border: 1px solid #89c4ff;
+}
+
+.tabContent {
+	padding: 10px 40px;
+	font-size: 20px;
+	border: 1px solid #89c4ff;
+	border-bottom-width: 5px;
+	border-right-width: 5px;
+}
+
+/* ここにプロパティを追加する */
+
+.content {
+	/*コンテンツは非表示*/
+	display: none;
+}
+
+/*↓tabとactiveの両方を持つ要素だけに適用（.active.tabでも同じ）*/
+.tab.active {
+	/*activeクラスの追加でタブの色を変更*/
+	color: blue;
+	background-color: white;
+	border-bottom-color: white;
+	border-right-width: 5px;
+}
+
+.content.active {
+	/*activeクラスの追加でコンテンツを表示*/
+	display: block;
+}

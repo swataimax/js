@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>入力フォーム</title>
+	<link rel="stylesheet" href="js06_04.css">
+</head>
+
+<body onload="displayItem()">
+	<div class="main-heading">ユーザー登録</div>
+	<div class="main-block">
+		<form action="./js06_04_02.html" method="get">
+			<div class="selection">
+				<div class="selection-heading">法人のお客様・個人のお客様</div>
+				<div class="flex">
+					<div class="customer-type">
+						<input type="radio" class="type" name="type" value="法人" checked onchange="displayItem()">法人
+					</div>
+					<div class="customer-type">
+						<input type="radio" class="type" name="type" value="個人" onchange="displayItem()">個人
+					</div>
+				</div>
+			</div>
+
+			<!--  共通  -->
+			<div class="sub-heading">お客様情報</div>
+			<div class="flex">
+				<div class="input-item-heading">ご担当者名</div>
+				<div class="input-item">
+					<input type="text" class="text-size-m" name="name">
+				</div>
+			</div>
+			<div class="flex">
+				<div class="input-item-heading">ご担当者名（フリガナ）</div>
+				<div class="input-item">
+					<input type="text" class="text-size-m" name="furigana">
+				</div>
+			</div>
+			<div class="flex">
+				<div class="input-item-heading">メールアドレス</div>
+				<div class="input-item">
+					<input type="text" class="text-size-l" name="email">
+				</div>
+			</div>
+			<div>&nbsp;</div>
+
+			<!--  法人  -->
+			<div class="corporate active">
+				<div class="sub-heading">会社情報</div>
+				<div class="flex">
+					<div class="input-item-heading">会社名</div>
+					<div class="input-item">
+						<input type="text" class="text-size-l" name="company-name">
+					</div>
+				</div>
+				<div class="flex">
+					<div class="input-item-heading">部署名</div>
+					<div class="input-item">
+						<input type="text" class="text-size-m" name="department-name">
+					</div>
+				</div>
+			</div>
+
+			<!--  個人  -->
+			<div class="individual">
+				<div class="sub-heading">住所</div>
+			</div>
+
+			<!--  共通  -->
+			<div class="flex">
+				<div class="input-item-heading">郵便番号（ハイフン入力不要）</div>
+				<div class="input-item">
+					<input type="text" id="zip-code" class="text-size-s" name="zip-code"
+						onblur="removeHyphen('zip-code')">
+				</div>
+			</div>
+			<div class="flex">
+				<div class="input-item-heading">住所</div>
+				<div class="input-item">
+					<input type="text" class="text-size-l" name="address">
+				</div>
+			</div>
+			<div class="flex">
+				<div class="input-item-heading">建物名</div>
+				<div class="input-item">
+					<input type="text" class="text-size-l" name="building-name">
+				</div>
+			</div>
+
+			<!--  法人  -->
+			<div class="corporate active">
+				<div class="flex">
+					<div class="input-item-heading industry">業種</div>
+					<div class="classification input-item industry">
+						<div class="industry-block">
+							<div class="industry-font">大分類</div>
+							<div>
+								<select id="major-category" name="major-category" onchange="majorIndustryChange()">
+									<option value="" selected disabled>大分類を選択してください</option>
+									<option value="製造業">製造業</option>
+									<option value="サービス業">サービス業</option>
+									<option value="金融業">金融業</option>
+								</select>
+							</div>
+						</div>
+						<div class="industry-block">
+							<div class="industry-font">小分類</div>
+							<div>
+								<select id="subcategory" name="subcategory" disabled>
+									<option value="" selected disabled>小分類を選択してください</option>
+									<option value="鉄鋼業" data-val="製造業">鉄鋼業</option>
+									<option value="食料品製造業" data-val="製造業">食料品製造業</option>
+									<option value="その他製造業" data-val="製造業">その他製造業</option>
+									<option value="専門サービス業" data-val="サービス業">専門サービス業</option>
+									<option value="情報サービス業" data-val="サービス業">情報サービス業</option>
+									<option value="その他サービス業" data-val="サービス業">その他サービス業</option>
+									<option value="銀行業" data-val="金融業">銀行業</option>
+									<option value="証券業" data-val="金融業">証券業</option>
+									<option value="その他金融業" data-val="金融業">その他金融業</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="flex">
+					<div class="input-item-heading headcount">従業員数</div>
+					<div class="input-item headcount">
+						<input type="radio" class="" name="headcount" value="10人未満">10人未満
+						<input type="radio" class="" name="headcount" value="10人以上～100人未満">10人以上～100人未満
+						<input type="radio" class="" name="headcount" value="101人以上～1000未満">101人以上～1000未満
+						<input type="radio" class="" name="headcount" value="1001人以上">1001人以上
+					</div>
+				</div>
+			</div>
+
+			<!--  個人  -->
+			<div class="individual">
+				<div class="flex">
+					<div class="input-item-heading">生年月日</div>
+					<div class="input-item">
+						<select name="year" class="birth-select">
+							<option value="2000">2000</option>
+							<option value="2001">2001</option>
+							<option value="2002">2002</option>
+							<option value="2003">2003</option>
+							<option value="2004">2004</option>
+							<option value="2005">2005</option>
+							<option value="2006">2006</option>
+							<option value="2007">2007</option>
+							<option value="2008">2008</option>
+							<option value="2009">2009</option>
+							<option value="2010">2010</option>
+						</select>
+						<select name="month" class="birth-select">
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select>
+						<select name="day" class="birth-select">
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+							<option value="24">24</option>
+							<option value="25">25</option>
+							<option value="26">26</option>
+							<option value="27">27</option>
+							<option value="28">28</option>
+							<option value="29">29</option>
+							<option value="30">30</option>
+							<option value="31">31</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<!--  共通  -->
+			<div class="flex">
+				<div class="input-item-heading">電話番号（ハイフン入力不要）</div>
+				<div class="input-item">
+					<input type="text" id="tel" class="text-size-s" name="tel" onblur="removeHyphen('tel')">
+				</div>
+			</div>
+
+			<div class="submit">
+				<div><input type="submit"></div>
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript" src="js06_04.js"></script>
+</body>
+
+</html>

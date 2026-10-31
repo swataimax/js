@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>モーダルウィンドウ</title>
+	<link rel="stylesheet" href="js06_02.css">
+</head>
+
+<body>
+	<div class="heading">アニマル図鑑</div>
+	<div class="animal-box">
+		<p><a href="#" class="modalOpen" onclick="getInfo('dog')">
+				犬について</a></p>
+	</div>
+	<div class="animal-box">
+		<p><a href="#" class="modalOpen" onclick="getInfo('cat')">
+				猫について</a></p>
+	</div>
+	<div class="modal">
+		<div class="modal-inner">
+			<div class="modal-content">
+				<div class="modal-content-dog">
+					<div class="modal-header">
+						<img src="img/dogA.png">
+						<span class="modalClose">×</span>
+					</div>
+					<div class="modal-body">
+						<p>
+							イヌ（犬）は食肉目イヌ科イヌ属に分類される哺乳類の一種である。<br>
+							古くからヒトに猟犬や番犬、牧羊犬、軍用犬、警察犬などとして使役されたほか、
+							愛玩動物（ペット）として飼われている。<br>
+							また品種改良が盛んに行われ、多様な犬種がいる。<br>
+							人の管理を離れて野生化したイヌは野犬（ノラ犬）と呼ぶ。
+						</p>
+					</div>
+				</div>
+				<div class="modal-content-cat">
+					<div class="modal-header">
+						<img src="img/catA.png">
+						<span class="modalClose">×</span>
+					</div>
+					<div class="modal-body">
+						<p>
+							ネコ（猫）は食肉目ネコ科ネコ属に分類されるリビアヤマネコ（ヨーロッパヤマネコ）が家畜化されたイエネコ（家猫）に対する通称である。<br>
+							イヌ（犬）と並ぶ代表的なペットとして、世界中で飼われている。<br>
+							猫は鋭い視覚、敏感な聴覚、優れた嗅覚を持ち、体が非常に柔軟であるため狭い場所に入ることも高い場所に登ることも容易にできる。<br>
+							独立心が強く、縄張り意識が高いのも特徴で、狩猟本能が強いため、しばしば遊びながらその本能を発揮する。<br>
+							自分の領域を守るためのマーキング行動や、鳴き声、体の動きを使ったコミュニケーションも行う。<br>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js06_02.js"></script>
+</body>
+
+</html>
